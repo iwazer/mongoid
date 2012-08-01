@@ -26,6 +26,7 @@ module Mongoid
       reload_relations
       IdentityMap.set(self)
       run_callbacks(:initialize)
+      run_callbacks(:find) unless _find_callbacks.empty?
       self
     end
 
