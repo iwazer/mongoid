@@ -58,7 +58,7 @@ module Mongoid
       self.sessions = {
         default: {
           database: name,
-          hosts: [ "localhost:27017" ],
+          hosts: [ "#{HOST}:#{PORT}" ],
           options: options
         }
       }
